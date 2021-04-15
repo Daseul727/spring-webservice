@@ -4,6 +4,7 @@ import org.aspectj.lang.annotation.After;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import java.time.LocalDateTime;
@@ -27,7 +28,7 @@ class PostsRepositoryTest {
         postsRepository.save(Posts.builder()
                             .title("테스트 게시글")
                             .content("테스트 본문")
-                            .author("daseul727@gmail.com").build());
+                            .author("daseul727").build());
 
         //when  테스트 하고자 하는 행위
         List<Posts> postsList = postsRepository.findAll();
@@ -50,7 +51,8 @@ class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        //AssertionErrors.assertTrue(posts.getCreatedDate().isAfter(now));
+        assertTrue(posts.getCreatedDate().isAfter(now));
+        assertTrue(posts.getModifyDateTime().isAfter(now));
     }
 
 }
