@@ -3,9 +3,35 @@ spring:
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+      enabled: true
+
 
   h2:
     console:
       enabled: true
   datasource:
     url: jdbc:h2:mem:testdb
+
+
+server:
+  port: 8085
+  tomcat:
+    file-encoding: UTF-8
+
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+    session:
+      timeout: 7200
+  error:
+    whitelabel:
+      enabled: false
+
+excel:
+  area: D:\\excel\\area\\
+  free: D:\\excel\\freebusi\\
