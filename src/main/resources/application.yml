@@ -1,5 +1,9 @@
 
 spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+
   h2:
     console:
       enabled: true
