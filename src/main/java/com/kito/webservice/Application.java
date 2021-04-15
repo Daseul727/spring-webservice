@@ -1,4 +1,4 @@
-package com.kito.springwebservice;
+package com.kito.webservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
