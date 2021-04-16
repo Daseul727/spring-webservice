@@ -14,6 +14,7 @@ public class webController {
 
     @GetMapping("/")
     public String main(){
+        System.out.println("main jsp로 갑니다-----------------------------");
         return "main";
     }
 }

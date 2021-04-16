@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "excel.spring.mvc.view.suffix",
+      "type": "java.lang.String",
+      "description": "Description for excel.spring.mvc.view.suffix."
+    },
+    {
+      "name": "excel.spring.mvc.view.prefix",
+      "type": "java.lang.String",
+      "description": "Description for excel.spring.mvc.view.prefix."
+    }
+  ] }
