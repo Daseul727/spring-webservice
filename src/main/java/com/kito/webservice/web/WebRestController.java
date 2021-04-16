@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController //RestController 는 responseBody + controller 로, @ResponseBody를 하지않더라도 알아서 json/text 등의 형태로 넘겨준다.
 @AllArgsConstructor
 public class WebRestController{
 
@@ -16,7 +16,7 @@ public class WebRestController{
 
     @GetMapping("/hello")
     public String hello(){
-        return "hello world";
+        return "webRestController hello ~";
     }
 
     @PostMapping("/posts")
